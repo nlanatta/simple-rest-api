@@ -8,7 +8,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
-// GetBooks returns the list of all books
+// GetBooks returns the list of all books.
 func GetBooks(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
@@ -18,7 +18,7 @@ func GetBooks(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-// GetBook returns a single book by ID
+// GetBook returns a single book by ID.
 func GetBook(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(r)
@@ -35,7 +35,7 @@ func GetBook(w http.ResponseWriter, r *http.Request) {
 	respondWithError(w, http.StatusNotFound, "Book not found")
 }
 
-// CreateBook adds a new book to the list
+// CreateBook adds a new book to the list.
 func CreateBook(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	var book Book
