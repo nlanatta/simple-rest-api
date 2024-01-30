@@ -7,7 +7,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
-// Book struct represents a simple data model
+// Book struct represents a simple data model.
 type Book struct {
 	ID     string `json:"id"`
 	Title  string `json:"title"`
